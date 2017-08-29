@@ -1,0 +1,23 @@
+{
+  "name": "node-babel-boilerplate",
+  "version": "0.0.1",
+  "description": "Node.js, Babel(ES6) Boilerplate with Visual Studio Code Debugger configurations.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dogagenc/node-babel-boilerplate.git"
+  },
+  "author": "Doga Genc <dogagenc@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node",
+    "clear": "rm -rf dist && mkdir dist",
+    "build": "npm run clear && babel src -d dist",
+    "serve": "node dist/index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0"
+  }
+}
